@@ -24,7 +24,7 @@ QUIT;
 SCRIPT
 
 # Importe o schema inicial e os dados
-sudo zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix zabbix --password senha123
+sudo zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -psenha123 zabbix
 
 # Desative log_bin_trust_function_creators após importar o schema
 sudo mysql -u root --password='' <<SCRIPT
