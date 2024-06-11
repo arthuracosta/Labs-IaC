@@ -36,3 +36,4 @@ sudo echo "DBPassword=senha123" >> /etc/zabbix/zabbix_server.conf
 #Inicie o servidor Zabbix e os processos do agente
 sudo systemctl restart zabbix-server zabbix-agent apache2
 sudo systemctl enable zabbix-server zabbix-agent apache2
+
