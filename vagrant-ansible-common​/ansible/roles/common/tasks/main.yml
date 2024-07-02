@@ -1,0 +1,18 @@
+---
+- name: atualizando cache
+  apt:
+    update_cache: true
+
+- name: Instalando pacotes essenciais Ubuntu
+  apt:
+    name: "{{ pacotes }}"
+    state: latest
+
+- name: Definindo um hostname
+  hostname:
+    name: server-linux    
+
+- name: criando usuario
+  user:
+     name: arthur
+     shell: /bin/bash
