@@ -1,0 +1,10 @@
+---
+  - name: instalação do nginx
+    apt:
+      name: nginx
+      state: latest
+    notify: reiniciando o nginx
+    
+  - name: adicionando o index.html
+    template: src=index.html dest=/var/www/html/
+    notify: reiniciando o nginx
